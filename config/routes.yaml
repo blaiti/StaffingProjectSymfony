@@ -1,0 +1,35 @@
+managers:
+  path: /
+  controller: App\Controller\ManagersController::index
+
+createManager:
+  path: /createManager
+  controller: App\Controller\ManagersController::createManager
+
+editManager:
+  path: /editManager/{id}
+  controller: App\Controller\ManagersController::editManager
+
+deleteManager:
+  path: /deleteManager/{id}
+  controller: App\Controller\ManagersController::deleteManager
+
+consultants:
+  path: /consultants
+  controller: App\Controller\ConsultantController::consultants
+
+createConsultant:
+  path: /createConsultant
+  controller: App\Controller\ConsultantController::createConsultant
+
+editConsultant:
+  path: /editConsultant/{id}
+  controller: App\Controller\ConsultantController::editConsultant
+
+deleteConsultant:
+  path: /deleteConsultant/{id}
+  controller: App\Controller\ConsultantController::deleteConsultant
+
+editProfile:
+  path: /editProfile/{id}
+  controller: App\Controller\ProfileController::editProfile

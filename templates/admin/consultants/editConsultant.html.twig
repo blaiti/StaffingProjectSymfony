@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un Consultant{% endblock %}
+
+{% block body %}
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1abc9c">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ path('managers') }}">
+                    <h4>S&P</h4>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('managers') }}" style="font-weight: bold">Project Managers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ path('consultants') }}">Consultants</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand" >
+                    <span class="material-icons">settings</span>
+                </a>
+                <a class="navbar-brand" >
+                    <span class="material-icons">logout</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="container" style="padding: 10px">
+            <h1>Modifier un Consultant</h1>
+            {{ form_start(form) }}
+            {{ form_start(form1) }}
+
+            <br/>
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.Position, {'label': 'Position'}) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form1.Seniority, {'label': 'Séniorité'}) }}
+                </div>
+            </div>
+
+            <br/>
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form1.Projects, {'label': 'Projets actuels'}) }}
+                </div>
+            </div>
+
+            <br/>
+            <button type="submit" class="btn" style="width: 100%; background-color: #1abc9c; color: white">Modifier</button>
+
+            {{ form_end(form1) }}
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+{% endblock body %}
